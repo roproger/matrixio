@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "matrixio",
+  "version": "0.5.0",
+  "description": "Matrix utility",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+  },
+  "author": "RoProger",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "dbriver": "^0.10.7"
+  }
+}
