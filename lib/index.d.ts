@@ -634,6 +634,7 @@ declare interface ProgramInstance<MatrixKeys, MatrixId> {
       cellValues: { [key in K]: any } | { [key in MatrixKeys]: any }
       search?: boolean
     }
+    cellMeta?: any
   }) => Promise<
     CreatedCell<{ [key in ConstantStringOrDefault<K> | MatrixId]: any }>
   >
@@ -661,6 +662,7 @@ declare type CreateProgram = <
       search?: boolean
     }
     connection: Connection
+    cellMeta?: any
   }) => any
   beforeInsertCell?: (context: {
     program: ProgramInstance<MatrixKeys, MatrixId>
@@ -669,6 +671,7 @@ declare type CreateProgram = <
     structure: S
     cell: CreatedCell<{ [key in Exclude<MatrixKeys, MatrixId>]: any }>
     connection: Connection
+    cellMeta?: any
   }) => any
   afterInsertCell?: (context: {
     program: ProgramInstance<MatrixKeys, MatrixId>
@@ -677,6 +680,7 @@ declare type CreateProgram = <
     structure: S
     cell: CreatedCell<{ [key in MatrixKeys | MatrixId]: any }>
     connection: Connection
+    cellMeta?: any
   }) => any
   afterCellsUpdate?: (context: {
     program: ProgramInstance<MatrixKeys, MatrixId>
@@ -686,6 +690,7 @@ declare type CreateProgram = <
     cell: CreatedCell<{ [key in MatrixKeys | MatrixId]: any }>
     head: { [key in MatrixId]: any }
     connection: Connection
+    cellMeta?: any
   }) => any
 }) => ProgramInstance<MatrixKeys, MatrixId>
 
