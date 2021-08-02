@@ -1,6 +1,6 @@
 {
   "name": "matrixio",
-  "version": "0.5.4",
+  "version": "0.5.5",
   "description": "Matrix utility",
   "main": "lib/index.js",
   "directories": {
